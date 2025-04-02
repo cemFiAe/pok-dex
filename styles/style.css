@@ -1,0 +1,499 @@
+/* Grundlegende Einstellungen */
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #06151D;
+    color: white;
+    font-family: sans-serif;
+}
+
+.d-none {
+    display: none;
+}
+
+.navbar {
+    background-color: #082029;
+}
+
+.container-fluid-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+a.navbar-brand {
+    color: white;
+}
+
+.collapse {
+    justify-content: flex-end;
+}
+
+.navbar-collapse {
+    display: block !important;
+  }
+  
+
+/* Übersicht / Content */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 20px;
+}
+
+/* Karten (kleine Übersichtskarten) */
+.card {
+    margin-top: 20px;
+    height: 220px;
+    width: 150px;
+    background-color: #092029;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.card img {
+    height: 100px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Typ-Farben (falls sie auch an anderen Stellen benötigt werden) */
+.electric {
+    background-color: yellow;
+}
+
+/* Diese Definitionen werden hier überschrieben durch die untenstehenden neuen Einstellungen */
+.grass, .poison, .bug {
+    background-color: green;
+}
+
+.fire {
+    background-color: rgba(255, 42, 0, 0.764);
+}
+
+.water {
+    background-color: rgba(0, 149, 255, 0.866);
+}
+
+.flying {
+    background-color: wheat;
+}
+
+.fighting {
+    background-color: black;
+}
+
+.psychic {
+    background-color: violet;
+}
+
+.ground {
+    background-color: brown;
+}
+
+/* Allgemeine Button-Einstellungen */
+button {
+    border-radius: 90px;
+    border-style: none;
+}
+
+/* Overlay (Detailansicht) */
+.overlay-card {
+    position: fixed; /* fixed für volle Abdeckung */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(59, 59, 59, 0.85);
+    z-index: 1;
+}
+
+.overlay-item {
+    width: 350px;
+    height: 550px;
+}
+
+.overlay-item img {
+    height: 50%;
+}
+
+/* Bootstrap-Button-Stil (falls genutzt) */
+.btn-outline-primary {
+    font-size: 12px;
+    width: 100px;
+}
+
+/* Inhaltsbereiche in Overlay */
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.statsContent {
+    display: flex;
+    flex-direction: column;
+}
+.evoChainContent {
+    display: flex;
+    flex-direction: column;
+}
+
+[id^="evoChainContent-"] {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Optional, für Abstand zwischen den Elementen */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sprite-Container */
+.sprite-container img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    image-rendering: auto; /* oder "smooth" falls benötigt */
+}
+
+.sprite-container img:hover {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    image-rendering: auto; /* oder "smooth" falls benötigt */
+}
+
+
+/* Typ-Buttons */
+.type-button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+}
+
+/* Container für jede Pokémon-Karte in der Übersicht */
+.poke-card {
+    width: 150px;
+    background-color: #0A1A2A; /* dunkles Blau/Grau */
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    color: #fff;
+    font-family: sans-serif;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+/* Kopfzeile der Karte */
+.poke-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    background-color: #111F2E;
+    font-size: 14px;
+}
+
+.poke-id {
+    color: #aaa;
+}
+
+.poke-name {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+/* Sprite-Container der Karte */
+.sprite-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sprite-container img {
+    width: 90px;
+    height: auto;
+}
+
+/* Dynamische Farben für Sprite-Container (hier als Beispiele für einige Typen) */
+.sprite-container.grass {
+    background-color: #49d0b0;
+}
+.sprite-container.fire {
+    background-color: rgba(255, 42, 0, 0.764);
+}
+.sprite-container.water {
+    background-color: rgba(0, 149, 255, 0.866);
+}
+/* Weitere Typen können hier ergänzt werden */
+
+/* Typ-Icons (kleine Kreise) */
+.type-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 0;
+    background-color: #0A1A2A;
+}
+
+.type-icon {
+    width: 24px;
+    height: 24px;
+    /* Standard-Hintergrundfarbe, wird später überschrieben */
+    background-color: #555;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.type-icon img {
+    width: 14px;
+    height: 14px;
+}
+
+/* Neue Hintergrundfarben für Typ-Icons */
+.type-icon.grass {
+    background-color: green;
+}
+.type-icon.normal {
+    background-color: white;
+}
+.type-icon.poison {
+    background-color: purple;
+}
+.type-icon.bug {
+    background-color: lightgreen;
+}
+.type-icon.flying {
+    background-color: beige;
+}
+.type-icon.water {
+    background-color: blue;
+}
+.type-icon.electric {
+    background-color: yellow;
+}
+.type-icon.fairy {
+    background-color: pink;
+}
+.type-icon.ground {
+    background-color: brown;
+}
+.type-icon.fighting {
+    background-color: orange;
+}
+.type-icon.fire {
+    background-color: red;
+}
+.type-icon.rock {
+    background-color: grey;
+}
+.type-icon.ice {
+    background-color: lightblue;
+}
+.type-icon.psychic {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+}
+.type-icon.ghost {
+    background-color: #D2B48C;
+}
+.type-icon.steel {
+    background-color: lightgrey;
+}
+.type-icon.dragon {
+    background-color: turquoise;
+}
+
+/* Load More und Collapse Buttons */
+#loadMore {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #49d0b0;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+#loadMore:hover {
+    background-color: #3bb8a3;
+}
+
+#collapseButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #49d0b0;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+#collapseButton:hover {
+    background-color: #3bb8a3;
+}
+
+/* Loader-Container (zentriert für allgemeinen Loader) */
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+}
+
+/* Loader für Load More */
+#loadMoreLoader {
+    position: fixed;
+    bottom: 100px;
+    left: 20px;
+    z-index: 1000;
+}
+
+/* Loader für Collapse */
+#collapseLoader {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Spinner (Ladekreis) */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #49d0b0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Responsive Anpassungen --- */
+
+/* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .poke-card, .card {
+        width: 45%;
+        margin: 10px;
+        height: auto;
+    }
+    
+    .content {
+        margin: 10px;
+        gap: 10px;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    /* Overlay-Karte etwas verkleinern */
+    .overlay-item {
+        width: 90%;
+        height: auto;
+    }
+    
+    /* Buttons anpassen */
+    #loadMore, #collapseButton {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* Smartphones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .poke-card, .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+    
+    .content {
+        flex-direction: column;
+        margin: 10px;
+        gap: 10px;
+    }
+    
+    .poke-header {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    
+    .sprite-container {
+        height: 80px;
+    }
+    
+    .sprite-container img {
+        width: 70px;
+    }
+    
+    /* Overlay-Karte anpassen */
+    .overlay-item {
+        width: 95%;
+        height: auto;
+    }
+    
+    /* Buttons: Positionierung anpassen */
+    #loadMore {
+        left: 10px;
+        bottom: 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    #collapseButton {
+        right: 10px;
+        bottom: 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    /* Loader-Positionen für kleinere Bildschirme */
+    #loadMoreLoader {
+        left: 10px;
+        bottom: 60px;
+    }
+    #collapseLoader {
+        right: 10px;
+        bottom: 60px;
+    }
+}
