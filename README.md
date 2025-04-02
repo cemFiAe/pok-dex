@@ -39,7 +39,8 @@ open index.html
 
 ## Screenshots
 
-*(You can insert screenshots of your project here)*
+![image](https://github.com/user-attachments/assets/d32b2b09-946e-4fd6-b595-d07edfe024f1)
+
 
 ## Author
 
